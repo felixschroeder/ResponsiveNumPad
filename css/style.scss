@@ -1,0 +1,82 @@
+$font-stack:        Helvetica Neue, Helvetica, Arial, sans-serif;
+$textColor:         #fff;
+$keyColor:          #333;
+$keyBorderColor:    #666;
+$keyPressColor:     #555;
+$transitionTime:    0.5s;
+
+@import 'reset';
+
+body{
+    overflow: hidden;
+}
+
+.input{
+    width: 100%;
+    height: 10%;
+    font-size: 10vmin;
+    padding: 0.2em;
+}
+
+.input:focus{
+    outline: none; 
+}
+
+.numPad {
+	max-height: 0;
+    transition: all $transitionTime ease-in-out;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.numPad.open {
+	max-height: 800px;
+}
+
+.key{
+    float: left;
+    width: 33.33%;
+    background: $keyColor;
+}
+
+.key:active{
+    background: $keyPressColor;
+}
+
+.full{
+    width: 100%;
+}
+
+.content{
+    border: 1px solid $keyBorderColor;
+    font-family: $font-stack;
+    color: $textColor;
+    font-size: 10vmin;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.delete, .submit{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    width: 100%;
+    height: 1.5em;
+}
+
+.delete{
+    background-image: url("../img/back.png");
+}
+
+.submit{
+    background-image: url("../img/check.png");
+}
+
+
+
+
+
+
