@@ -6,9 +6,7 @@ var $ = function (id) {
 };
 
 window.onload = function getKeys() {
-    
     var chars, i;
-    
     chars = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '0'];
 
     for (i = 0; i < chars.length; i++) {
@@ -23,17 +21,14 @@ function print(nr) {
 }
 
 function del() {
-    
     $('input').value = $('input').value.slice(0, -1);
 }
 
 function slide() {
-    
     $('numPad').classList.toggle('open');
 }
 
 function submit() {
-    
     var val = $('input').value;
     
     $('output').innerHTML +=  val + '<br />';
